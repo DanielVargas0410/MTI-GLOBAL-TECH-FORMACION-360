@@ -1,0 +1,58 @@
+/* Estilos para categorías */
+.gridCategorias {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.categoriaCard {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.categoriaCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.nombreCategoria {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.descripcionCategoria {
+  color: #6b7280;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Badges */
+.badgeActivo {
+  background-color: #10b981;
+  color: white;
+}
+
+.badgeInactivo {
+  background-color: #ef4444;
+  color: white;
+}
+
+.badgeDefault {
+  background-color: #6b7280;
+  color: white;
+}
+
+/* Dark mode */
+.dark .categoriaCard {
+  background-color: #1f2937;
+  border-color: #374151;
+}
+
+.dark .nombreCategoria {
+  color: #f9fafb;
+}
+
+.dark .descripcionCategoria {
+  color: #9ca3af;
+}

@@ -1,0 +1,98 @@
+/* Estilos específicos para el módulo de cursos */
+
+.cursoCard {
+  transition: all 0.3s ease;
+  border-left: 4px solid #3b82f6;
+  background: white;
+  border: 1px solid #e5e7eb;
+}
+
+.cursoCard.dark {
+  background: #374151;
+  border: 1px solid #4b5563;
+  border-left: 4px solid #60a5fa;
+}
+
+.cursoCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.cursoCard.dark:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.precioBadge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+}
+
+.estadoActivo {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.estadoInactivo {
+  background-color: #fef2f2;
+  color: #991b1b;
+}
+
+.estadoBorrador {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.tituloCurso {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.cursoCard.dark .tituloCurso {
+  color: #f9fafb;
+}
+
+.descripcionCurso {
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.cursoCard.dark .descripcionCurso {
+  color: #d1d5db;
+}
+
+.infoCurso {
+  margin-bottom: 1rem;
+}
+
+.detallesCurso {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.cursoCard.dark .detallesCurso {
+  color: #d1d5db;
+}
+
+.categoriaCurso {
+  font-weight: 500;
+}
+
+.precioCurso {
+  font-weight: 700;
+}
+
+.codigoCurso {
+  font-style: italic;
+}
+
+.gridCursos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}

@@ -1,0 +1,125 @@
+:root {
+  --mti-blue: #123C69;
+  --mti-green: #ACD157;
+  --mti-green-dark: #7BBF00;
+  --mti-blue-light: #4A6FA5;
+  --mti-blue-dark: #0F2A4D;
+  --mti-gray-light: #F5F7FA;
+  --mti-gray-dark: #6B7280;
+}
+
+body {
+  background: linear-gradient(135deg, var(--mti-green-light) 0%, var(--mti-blue-light) 100%);
+  font-family: 'Inter', sans-serif;
+  color: var(--mti-blue-dark);
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  background: var(--mti-gray-light);
+}
+
+.sidebar {
+  width: 280px;
+  background-color: var(--mti-blue);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.sidebar-item {
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-item:hover,
+.sidebar-item.active {
+  background-color: var(--mti-green);
+  color: var(--mti-blue-dark);
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+  margin: 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--mti-blue-dark);
+}
+
+.card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.activity-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--mti-gray-light);
+}
+
+.activity-icon {
+  width: 2rem;
+  height: 2rem;
+  background: var(--mti-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.button-primary {
+  background: var(--mti-green);
+  color: var(--mti-blue-dark);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.button-primary:hover {
+  background: var(--mti-green-dark);
+  color: white;
+}

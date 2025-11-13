@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222.2 84% 4.9%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96%;
+  --accent-foreground: 222.2 84% 4.9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 222.2 84% 4.9%;
+  --radius: 0.5rem;
+
+  /* MTI Global Color Palette using HSL values */
+  --mti-blue: 210 73% 25%;
+  --mti-blue-light: 210 73% 30%;
+  --mti-blue-dark: 210 73% 20%;
+  --mti-green: 75 58% 58%;
+  --mti-green-dark: 75 58% 53%;
+  --mti-gray: 0 0% 96%;
+}
+
+.dark {
+  --background: 222 84% 4.9%; /* Un azul más profundo y oscuro */
+  --foreground: 210 20% 98%;
+  --card: 222 84% 4.9%; /* Coincide con el fondo para una apariencia sin bordes */
+  --card-foreground: 210 20% 98%;
+  --popover: 222 84% 4.9%;
+  --popover-foreground: 210 20% 98%;
+  --primary: 217.2 91.2% 59.8%; /* Un azul primario más vibrante */
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 20% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 20% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 20% 98%;
+  --border: 217.2 32.6% 17.5%; /* Borde más oscuro para integrarse */
+  --input: 217.2 32.6% 17.5%;
+  --ring: 216 12.2% 83.9%;
+
+  /* MTI Global Color Palette Dark Mode */
+  --mti-blue: 210 73% 75%; /* Lighter blue for dark mode */
+  --mti-blue-light: 210 73% 80%;
+  --mti-blue-dark: 210 73% 70%;
+  --mti-green: 75 58% 40%; /* Darker green for dark mode */
+  --mti-green-dark: 75 58% 35%;
+  --mti-gray: 215 27.9% 16.9%; /* Adjusted gray for dark mode */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom animations for enhanced UX */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px hsl(var(--mti-green) / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(var(--mti-green) / 0.6);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2.5s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}

@@ -1,0 +1,17 @@
+.gridVideos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.videoCard {
+  transition: all 0.3s ease;
+  border-left: 4px solid #10b981; /* verde */
+  background: white;
+  border: 1px solid #e5e7eb;
+}
+
+.videoCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
